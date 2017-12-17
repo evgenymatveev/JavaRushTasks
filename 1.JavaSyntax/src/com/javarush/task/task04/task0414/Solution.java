@@ -12,16 +12,12 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
             if(scanner.hasNextInt()) {
                 int year = scanner.nextInt();
-                    if(year % 100 == 0 && year % 400 == 0) {
-                        x = "365";
-                        System.out.println("количество дней в году: " + x);
-                    } else if(year % 100 == 0 && year % 400 != 0) {
-                        x = "366";
-                        System.out.println("количество дней в году: " + x);
+                    if (((year % 400) == 0) || ((year % 4 == 0) && (year % 100 != 0))) {
+                        System.out.println("количество дней в году: " + 366);
                     } else {
-                        x = "365";
-                        System.out.println("количество дней в году: " + x);
+                        System.out.println("количество дней в году: " + 365);
                     }
+
             }
     }
 }
