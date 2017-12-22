@@ -13,15 +13,16 @@ public class Solution {
         int a = Integer.parseInt(bufferedReader.readLine());
         int b = Integer.parseInt(bufferedReader.readLine());
         int c = Integer.parseInt(bufferedReader.readLine());
-
-        if (a == b && a != c) {
-            System.out.println(a + " " + b);
-        }
-        if (b == c && b != a) {
-            System.out.println(b + " " + c);
-        }
         if (a == b && a == c) {
             System.out.println(a + " " + b + " " + c);
+        } else {
+            if (a == b) {
+                System.out.println(a + " " + b);
+            } else if (b == c) {
+                System.out.println(b + " " + c);
+            } else if (a == c){
+                System.out.println(a + " " + c);
+            }
         }
     }
 }
