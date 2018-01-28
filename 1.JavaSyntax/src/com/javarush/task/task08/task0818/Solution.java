@@ -24,12 +24,12 @@ public class Solution {
     }
 
     public static void removeItemFromMap(HashMap<String, Integer> map) {
-        Iterator <HashMap.Entry<String, Integer>> it = map.entrySet().iterator();
-            while (it.hasNext()) {
-                if(it.next().getValue() < 500) {
-                    it.remove();
-                }
+        Iterator<HashMap.Entry<String, Integer>> it = map.entrySet().iterator();
+        while (it.hasNext()) {
+            if (it.next().getValue() < 500) {
+                it.remove();
             }
+        }
     }
 
     public static void main(String[] args) {
